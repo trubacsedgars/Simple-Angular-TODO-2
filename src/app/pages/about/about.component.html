@@ -1,0 +1,16 @@
+<section class="section">
+  <h1 class="section__heading">{{title}}</h1>
+  <button (click)="toggleShowDescription()">Paradit/Slept aprakstu</button>
+  <span>{{showDescription}}</span>
+
+  <div *ngIf="showDescription">
+    <span class="about-title">Apraksts: </span>
+    <span>{{about.description | uppercase }} </span>
+
+    <span class="about-title">Ratings: </span>
+    <span>{{about.rating | number: '1.0-2'}}</span>
+
+    <span class="about-title">Lapa uztaisita</span>
+    <span>{{about.createdAt | date: 'dd.MM.y'}}</span>
+  </div>
+</section>
